@@ -29,6 +29,14 @@ class BowlingGameUnitTests(unittest.TestCase):
     	# print 'Score is: ',  self.g.score()
     	assert self.g.score() == 16
 
+    def test_one_strike(self):
+    	self.g.roll(10)
+    	self.g.roll(3)
+    	self.g.roll(4)
+    	self.rollMany(16,0)
+    	print 'Score is: ', self.g.score()
+    	assert self.g.score() == 24
+
     def rollMany(self, nn, pins):
     	for xx in range(0, nn):
     		self.g.roll(pins)
