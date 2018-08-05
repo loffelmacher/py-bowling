@@ -33,6 +33,9 @@ class BowlingGameUnitTests(unittest.TestCase):
     	for xx in range(0, nn):
     		self.g.roll(pins)
 
+    def rollSpare(self):
+    	self.g.roll(5)
+    	self.g.roll(5)
 
 if __name__ == '__main__':
     unittest.main()

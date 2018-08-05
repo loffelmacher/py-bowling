@@ -19,10 +19,12 @@ class Game(object):
         score = 0
         ii = 0
         for frame in range(0, 10):
-            if self._rolls[ii] + self._rolls[ii+1] == 10:
+            if self.isSpare(ii):
                 score += 10 + self._rolls[ii+2]
             else:
                 score += self._rolls[ii] + self._rolls[ii+1]
             ii += 2
         return score
 
+    def isSpare(self, frameIndex):
+        return self._rolls[frameIndex] + self._rolls[frameIndex+1] == 10
