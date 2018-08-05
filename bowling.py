@@ -2,20 +2,18 @@ import os
 
 class Game(object):
     """This is the main, and only, class in the package."""
-    _score = 0
-    _rolls = [0] * 21
-    _currentRoll = 0
 
     def __init__(self):
         super(Game, self).__init__()
+        self._score = 0
+        self._currentRoll = 0
+        self._rolls = [0] * 21
 
     def roll(self, pins):
-        # print "Entering roll()"
         self._rolls[self._currentRoll] = pins
         self._currentRoll += 1
 
     def score(self):
-        # print "Entering score()"
         score = 0
         frameIndex = 0
         for frame in range(0, 10):
