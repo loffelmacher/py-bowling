@@ -5,10 +5,12 @@ from .context import bowling
 import unittest
 
 
-class BasicTestSuite(unittest.TestCase):
-    """Basic test cases."""
+class BowlingGameUnitTests(unittest.TestCase):
+    """Unit tests for the Bowling Kata."""
+    def setUp():
+    	return
 
-    def test_absolute_truth_and_meaning(self):
+    def test_all_gutters(self):
         assert True
 
 
