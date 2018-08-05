@@ -30,11 +30,11 @@ class BowlingGameUnitTests(unittest.TestCase):
     	assert self.g.score() == 16
 
     def test_one_strike(self):
-    	self.g.roll(10)
+    	self.rollStrike()
     	self.g.roll(3)
     	self.g.roll(4)
     	self.rollMany(16,0)
-    	print 'Score is: ', self.g.score()
+    	# print 'Score is: ', self.g.score()
     	assert self.g.score() == 24
 
     def rollMany(self, nn, pins):
@@ -44,6 +44,10 @@ class BowlingGameUnitTests(unittest.TestCase):
     def rollSpare(self):
     	self.g.roll(5)
     	self.g.roll(5)
+
+    def rollStrike(self):
+    	self.g.roll(10)
+
 
 if __name__ == '__main__':
     unittest.main()
