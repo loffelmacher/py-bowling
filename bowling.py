@@ -16,4 +16,13 @@ class Game(object):
 
     def score(self):
         # print "Entering score()"
-        return sum(self._rolls)
+        score = 0
+        ii = 0
+        for frame in range(0, 10):
+            if self._rolls[ii] + self._rolls[ii+1] == 10:
+                score += 10 + self._rolls[ii+2]
+            else:
+                score += self._rolls[ii] + self._rolls[ii+1]
+            ii += 2
+        return score
+
