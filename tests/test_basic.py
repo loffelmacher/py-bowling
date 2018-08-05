@@ -7,10 +7,11 @@ import unittest
 
 class BowlingGameUnitTests(unittest.TestCase):
     """Unit tests for the Bowling Kata."""
-    def setUp():
-    	return
+    def setUp(self):
+    	self.g = bowling.Game()
 
     def test_all_gutters(self):
+    	# g.roll(20,0)
         assert True
 
 
