@@ -1,2 +1,2 @@
 # Python Bowling Kata
-A coding exercise from Uncle Bob.
+Exercise from Uncle Bob's website: http://butunclebob.com/ArticleS.UncleBob.TheBowlingGameKata. 
